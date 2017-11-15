@@ -2,64 +2,77 @@ import model.Coordinate;
 import model.Direction.Turn;
 import model.Direction.Orientation;
 import model.Robot;
-
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.stream.Stream;
 
 public class Simulator {
 
     private Robot robot;
 
-
     public Simulator(){
         robot = new Robot();
     }
 
+    public void parseCommand(String input){
 
-    public boolean parseCommand(String input){
+        String command;
+        int x = -1; int y = -1;
+        Orientation o = null;
+
         String[] tmp = input.split(" ");
-        String command = tmp[0];
-
+        if(tmp.length > 2 || tmp.length == 0 ) return;
+        command = tmp[0];
+        if(tmp.length == 2){
+            String[] params = tmp[1].split(",");
+            if(params.length != 3) return;
+            try {
+                x = Integer.parseInt(params[0]);
+                y = Integer.parseInt(params[1]);
+                o = Orientation.valueOf(params[2]);
+            }catch (Exception e){
+                return;
+            }
+        }
         switch (command){
             case "PLACE":
-                String[] params = tmp[1].split(",");
-                Coordinate coordinate = new Coordinate(Integer.parseInt(params[0]), Integer.parseInt(params[1]), Orientation.valueOf(params[2]));
-                return robot.place(coordinate);
+                Coordinate coordinate = new Coordinate(x,y,o);
+                robot.place(coordinate);
+                break;
             case "MOVE":
-                return robot.move();
+                robot.move();
+                break;
             case "LEFT":
-                return robot.turnTo(Turn.valueOf("LEFT"));
+                robot.turnTo(Turn.valueOf("LEFT"));
+                break;
             case "RIGHT":
-                return robot.turnTo(Turn.valueOf("RIGHT"));
+                robot.turnTo(Turn.valueOf("RIGHT"));
+                break;
             case "REPORT":
-                return robot.report();
+                robot.report();
             default:
-                return false;
+                break;
         }
     }
 
-    public boolean executeCommandsFromFile(String source) throws URISyntaxException {
-        URI uri = ClassLoader.getSystemResource(source).toURI();
-        try (Stream<String> stream = Files.lines(Paths.get(uri))) {
+    public void executeCommandsFromFile(String source) {
+        try {
+            InputStream in = getClass().getResourceAsStream(source);
+            Stream<String> stream = new BufferedReader(new InputStreamReader(in)).lines();
             stream.forEach(this :: parseCommand);
-            return true;
-        }catch (IOException e){
-            e.printStackTrace();
-            return false;
+        }catch (Exception e){
+            System.out.printf("File '%s' not exist", source);
+            System.exit(-1);
         }
     }
 
-    public static void main(String[] args) throws URISyntaxException {
+    public static void main(String[] args) {
 
-        String source = "data/Robcommands1";
-
+        String source = "data/ExampleD";
         Simulator sim = new Simulator();
         sim.executeCommandsFromFile(source);
+
     }
 
 

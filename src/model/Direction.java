@@ -8,10 +8,10 @@ public class Direction {
 
         NORTH, EAST, SOUTH, WEST;
 
-        private static Orientation[] vals = values();
+        private static Orientation[] orientations= values();
 
         Orientation turnTo(Turn turn) {
-            return vals[(4 + this.ordinal() + (turn == RIGHT ? 1 : -1)) % 4];
+            return  orientations[(4 + this.ordinal() + (turn == RIGHT ? 1 : -1)) % 4];
         }
 
     }
@@ -19,4 +19,5 @@ public class Direction {
     public enum Turn {
         LEFT, RIGHT
     }
+
 }

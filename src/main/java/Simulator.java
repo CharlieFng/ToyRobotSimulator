@@ -1,7 +1,8 @@
-import model.Coordinate;
-import model.Direction.Turn;
-import model.Direction.Orientation;
-import model.Robot;
+package main.java;
+import main.java.model.Coordinate;
+import main.java.model.Direction.Turn;
+import main.java.model.Direction.Orientation;
+import main.java.model.Robot;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -15,7 +16,7 @@ public class Simulator {
         robot = new Robot();
     }
 
-    public void parseCommand(String input){
+    private void parseCommand(String input){
 
         String command;
         int x = -1; int y = -1;
@@ -56,7 +57,7 @@ public class Simulator {
         }
     }
 
-    public void executeCommandsFromFile(String source) {
+    public void execute(String source) {
         try {
             InputStream in = getClass().getResourceAsStream(source);
             Stream<String> stream = new BufferedReader(new InputStreamReader(in)).lines();
@@ -69,9 +70,9 @@ public class Simulator {
 
     public static void main(String[] args) {
 
-        String source = "data/ExampleD";
+        String source = "../../test.data/ExampleD";
         Simulator sim = new Simulator();
-        sim.executeCommandsFromFile(source);
+        sim.execute(source);
 
     }
 

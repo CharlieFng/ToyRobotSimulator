@@ -1,9 +1,13 @@
-package model;
-import model.Direction.Turn;
+package main.java.model;
+import main.java.model.Direction.Turn;
 
 public class Robot {
 
     private Coordinate coordinate;
+
+    public Coordinate getCoordinate() {
+        return coordinate;
+    }
 
     public boolean place(Coordinate coordinate){
         if(coordinate.withInRange()){

@@ -1,6 +1,6 @@
-package model;
+package main.java.model;
 
-import static model.Direction.Turn.RIGHT;
+import static main.java.model.Direction.Turn.RIGHT;
 
 public class Direction {
 

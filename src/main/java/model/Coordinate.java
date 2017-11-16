@@ -1,5 +1,5 @@
-package model;
-import model.Direction.Orientation;
+package main.java.model;
+import main.java.model.Direction.Orientation;
 
 public class Coordinate {
 
@@ -16,6 +16,14 @@ public class Coordinate {
         this.x = x;
         this.y = y;
         this.orientation = orientation;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 
     public Orientation getOrientation() {

@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 public class Simulator {
 
-    private Robot robot;
+    public Robot robot;
 
     public Simulator(){
         robot = new Robot();

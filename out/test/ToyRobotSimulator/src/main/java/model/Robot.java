@@ -1,14 +1,25 @@
 package main.java.model;
 import main.java.model.Direction.Turn;
 
+/**
+ * The Robot class defines the properties hold by robot, and a bunch of valid behaviours that robot can take.
+ */
 public class Robot {
 
+    /**
+     * Property that determine the location of robot, which consist of X-axis, Y-axis and Orientation.
+     */
     private Coordinate coordinate;
 
     public Coordinate getCoordinate() {
         return coordinate;
     }
 
+    /**
+     * Place the robot in the location based on the given coordinate, if the coordinate is out of bounds, then ignore it.
+     * @param coordinate
+     * @return
+     */
     public boolean place(Coordinate coordinate){
         if(coordinate.withInRange()){
             this.coordinate = coordinate;
@@ -19,6 +30,11 @@ public class Robot {
         }
     }
 
+    /**
+     * Move the robot one unit forward in the direction it is currently facing. If the move will cause robot out of bound,
+     * then ignore it.
+     * @return
+     */
     public boolean move(){
         if(coordinate == null) return false;
         switch (coordinate.getOrientation()) {
@@ -35,18 +51,23 @@ public class Robot {
         }
     }
 
+    /**
+     * Rotate the robot 90 degrees( left or right ) in the specified direction without changing the position of the robot.
+     * If robot hasn't been placed, then ignore it.
+     * @param turn
+     * @return
+     */
     public boolean turnTo(Turn turn){
         if(coordinate == null) return false;
         coordinate.setOrientation(coordinate.getOrientation().turnTo(turn));
         return true;
     }
 
+    /**
+     * Announce the location of robot.
+     */
     public void report(){
-        if(coordinate == null){
-            System.out.println("I'm not born yet");
-        }else{
-            System.out.println(coordinate);
-        }
+        if(coordinate != null) System.out.println(coordinate);
     }
 
 }

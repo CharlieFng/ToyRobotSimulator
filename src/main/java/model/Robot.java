@@ -67,11 +67,7 @@ public class Robot {
      * Announce the location of robot.
      */
     public void report(){
-        if(coordinate == null){
-            System.out.println("I'm not born yet");
-        }else{
-            System.out.println(coordinate);
-        }
+        if(coordinate != null) System.out.println(coordinate);
     }
 
 }

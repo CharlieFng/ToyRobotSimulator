@@ -8,6 +8,11 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
+/**
+ * The Simulator class take 'commands file path' from user input, then apply each single command to the robot, only
+ * valid and 'safe' commands will be executed.
+ *
+ */
 public class Simulator {
 
     private Robot robot;
@@ -21,6 +26,10 @@ public class Simulator {
         return robot;
     }
 
+    /**
+     * Take each single line to parse, only those can be parsed to valid command will be apply to robot.
+     * @param input
+     */
     private void parseCommand(String input){
 
         String command;
@@ -62,6 +71,10 @@ public class Simulator {
         }
     }
 
+    /**
+     * Load 'command file' from given path, if file not exist, then program will exit.
+     * @param source
+     */
     public void execute(String source) {
         try {
             Stream<String> stream = Files.lines(Paths.get(source));
@@ -72,6 +85,10 @@ public class Simulator {
         }
     }
 
+    /**
+     * Start the simulator, waiting for user input.
+     * @param args
+     */
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);

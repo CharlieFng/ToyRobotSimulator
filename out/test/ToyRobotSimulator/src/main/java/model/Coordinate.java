@@ -1,6 +1,9 @@
 package main.java.model;
 import main.java.model.Direction.Orientation;
 
+/**
+ * The Coordinate class defines the composition of a location, and valid range of each sub-coordinate.
+ */
 public class Coordinate {
 
     private static final int X_LOWER_LIMIT = 0;
@@ -34,6 +37,10 @@ public class Coordinate {
         this.orientation = orientation;
     }
 
+    /**
+     * Check whether the coordinate is within the valid range.
+     * @return
+     */
     public boolean withInRange(){
         return x >= X_LOWER_LIMIT && x <= X_UPPER_LIMIT &&
                 y >= Y_LOWER_LIMIT && y <= Y_UPPER_LIMIT;
@@ -73,7 +80,7 @@ public class Coordinate {
 
     @Override
     public String toString() {
-        return String.format("Current location X = %d, Y = %d, F = %s", x,y,orientation);
+        return String.format("Current location: X = %d, Y = %d, F = %s", x,y,orientation);
     }
 
 

@@ -12,6 +12,7 @@ public class Simulator {
 
     private Robot robot;
 
+
     public Simulator(){
         robot = new Robot();
     }

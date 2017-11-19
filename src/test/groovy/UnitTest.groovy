@@ -1,7 +1,7 @@
-import main.java.model.Coordinate
-import main.java.model.Direction.Orientation
-import main.java.model.Direction.Turn
-import main.java.model.Robot
+import model.Coordinate
+import model.Direction.Orientation
+import model.Direction.Turn
+import model.Robot
 import spock.lang.Specification
 import spock.lang.Unroll
 

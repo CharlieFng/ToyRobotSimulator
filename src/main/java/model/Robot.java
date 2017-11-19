@@ -1,5 +1,5 @@
-package main.java.model;
-import main.java.model.Direction.Turn;
+package model;
+import model.Direction.Turn;
 
 /**
  * The Robot class defines the properties hold by robot, and a bunch of valid behaviours that robot can take.

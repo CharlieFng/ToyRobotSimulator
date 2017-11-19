@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ToyRobotSimulator.iml" filepath="$PROJECT_DIR$/ToyRobotSimulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ToyRobotSimulator.iml" filepath="$PROJECT_DIR$/.idea/modules/ToyRobotSimulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ToyRobotSimulator_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ToyRobotSimulator_main.iml" group="ToyRobotSimulator" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ToyRobotSimulator_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ToyRobotSimulator_test.iml" group="ToyRobotSimulator" />
     </modules>
   </component>
 </project>

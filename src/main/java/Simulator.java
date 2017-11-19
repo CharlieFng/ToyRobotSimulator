@@ -1,8 +1,7 @@
-package main.java;
-import main.java.model.Coordinate;
-import main.java.model.Direction.Turn;
-import main.java.model.Direction.Orientation;
-import main.java.model.Robot;
+import model.Coordinate;
+import model.Direction.Turn;
+import model.Direction.Orientation;
+import model.Robot;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Scanner;

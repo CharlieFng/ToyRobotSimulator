@@ -1,6 +1,4 @@
-package test.groovy
-
-import main.java.Simulator
+import Simulator
 import spock.lang.Specification
 import spock.lang.Unroll
 

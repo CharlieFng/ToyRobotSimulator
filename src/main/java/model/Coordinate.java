@@ -1,5 +1,5 @@
-package main.java.model;
-import main.java.model.Direction.Orientation;
+package model;
+import model.Direction.Orientation;
 
 /**
  * The Coordinate class defines the composition of a location, and valid range of each sub-coordinate.

@@ -1,6 +1,5 @@
-package main.java.model;
-
-import static main.java.model.Direction.Turn.RIGHT;
+package model;
+import static model.Direction.Turn.RIGHT;
 
 /**
  * The Direction defines the direction(Orientation) that robot can face towards, and the direction(Turn) that robot can rotate,

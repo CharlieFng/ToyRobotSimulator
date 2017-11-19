@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="IntegrationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-11-19T02:32:02" hostname="Siyus-MacBook-Pro-2.local" time="0.094">
+<testsuite name="IntegrationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-11-19T12:24:01" hostname="Siyus-MacBook-Pro-2.local" time="0.1">
   <properties/>
-  <testcase name="load file from src/test/data/ExampleA and execute, robot is at (0, 1, NORTH)" classname="IntegrationTest" time="0.085"/>
-  <testcase name="load file from src/test/data/ExampleB and execute, robot is at (0, 0, WEST)" classname="IntegrationTest" time="0.002"/>
-  <testcase name="load file from src/test/data/ExampleC and execute, robot is at (3, 3, NORTH)" classname="IntegrationTest" time="0.001"/>
-  <testcase name="load file from src/test/data/ExampleD and execute, robot is at (4, 3, SOUTH)" classname="IntegrationTest" time="0.002"/>
+  <testcase name="load file from src/test/data/ExampleA and execute, robot is at (0, 1, NORTH)" classname="IntegrationTest" time="0.092"/>
+  <testcase name="load file from src/test/data/ExampleB and execute, robot is at (0, 0, WEST)" classname="IntegrationTest" time="0.001"/>
+  <testcase name="load file from src/test/data/ExampleC and execute, robot is at (3, 3, NORTH)" classname="IntegrationTest" time="0.002"/>
+  <testcase name="load file from src/test/data/ExampleD and execute, robot is at (4, 3, SOUTH)" classname="IntegrationTest" time="0.001"/>
   <testcase name="load file from src/test/data/ExampleE and execute, robot is at (2, 4, NORTH)" classname="IntegrationTest" time="0.002"/>
   <system-out><![CDATA[Current location: X = 0, Y = 1, F = NORTH
 Current location: X = 0, Y = 0, F = WEST

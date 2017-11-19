@@ -11,7 +11,7 @@ sourceSets {
 
     test {
         groovy {
-            srcDirs = ['src/test/']
+            srcDirs = ['src/test/groovy']
         }
     }
 }

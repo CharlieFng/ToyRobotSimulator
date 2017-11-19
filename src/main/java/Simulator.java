@@ -64,7 +64,7 @@ public class Simulator {
                 robot.turnTo(Turn.valueOf("RIGHT"));
                 break;
             case "REPORT":
-                robot.report();
+                System.out.println(robot.report());
             default:
                 break;
         }

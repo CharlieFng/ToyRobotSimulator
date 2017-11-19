@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="IntegrationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-11-19T12:24:01" hostname="Siyus-MacBook-Pro-2.local" time="0.1">
+<testsuite name="IntegrationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-11-19T23:41:27" hostname="Siyus-MacBook-Pro-3.local" time="0.083">
   <properties/>
-  <testcase name="load file from src/test/data/ExampleA and execute, robot is at (0, 1, NORTH)" classname="IntegrationTest" time="0.092"/>
+  <testcase name="load file from src/test/data/ExampleA and execute, robot is at (0, 1, NORTH)" classname="IntegrationTest" time="0.078"/>
   <testcase name="load file from src/test/data/ExampleB and execute, robot is at (0, 0, WEST)" classname="IntegrationTest" time="0.001"/>
-  <testcase name="load file from src/test/data/ExampleC and execute, robot is at (3, 3, NORTH)" classname="IntegrationTest" time="0.002"/>
-  <testcase name="load file from src/test/data/ExampleD and execute, robot is at (4, 3, SOUTH)" classname="IntegrationTest" time="0.001"/>
-  <testcase name="load file from src/test/data/ExampleE and execute, robot is at (2, 4, NORTH)" classname="IntegrationTest" time="0.002"/>
-  <system-out><![CDATA[Current location: X = 0, Y = 1, F = NORTH
-Current location: X = 0, Y = 0, F = WEST
-Current location: X = 3, Y = 3, F = NORTH
-Current location: X = 4, Y = 4, F = NORTH
-Current location: X = 4, Y = 3, F = SOUTH
-Current location: X = 4, Y = 3, F = SOUTH
-Current location: X = 2, Y = 4, F = NORTH
+  <testcase name="load file from src/test/data/ExampleC and execute, robot is at (3, 3, NORTH)" classname="IntegrationTest" time="0.001"/>
+  <testcase name="load file from src/test/data/ExampleD and execute, robot is at (4, 3, SOUTH)" classname="IntegrationTest" time="0.002"/>
+  <testcase name="load file from src/test/data/ExampleE and execute, robot is at (2, 4, NORTH)" classname="IntegrationTest" time="0.001"/>
+  <system-out><![CDATA[Current Location: X = 0, Y = 1, F = NORTH
+Current Location: X = 0, Y = 0, F = WEST
+Current Location: X = 3, Y = 3, F = NORTH
+I have not been placed
+I have not been placed
+I have not been placed
+Current Location: X = 4, Y = 4, F = NORTH
+Current Location: X = 4, Y = 3, F = SOUTH
+I have not been placed
+Current Location: X = 4, Y = 3, F = SOUTH
+Current Location: X = 2, Y = 4, F = NORTH
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

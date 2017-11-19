@@ -80,7 +80,7 @@ public class Coordinate {
 
     @Override
     public String toString() {
-        return String.format("Current location: X = %d, Y = %d, F = %s", x,y,orientation);
+        return String.format("X = %d, Y = %d, F = %s", x,y,orientation);
     }
 
 

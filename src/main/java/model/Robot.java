@@ -66,8 +66,9 @@ public class Robot {
     /**
      * Announce the location of robot.
      */
-    public void report(){
-        if(coordinate != null) System.out.println(coordinate);
+    public String report(){
+        if(coordinate != null) return String.format("Current Location: %s", coordinate.toString());
+        return "I have not been placed";
     }
 
 }
